@@ -11,6 +11,16 @@ import Age from './components/Age';
 
 function App() {
 
+  // event, input
+  const [userInput, setUserInput] = useState("")
+  const handleInputChange = (e) => {
+    setUserInput(e.target.value);
+  }
+  const handleButtonClick = (e) => {
+    alert(userInput);
+  }
+
+
   // age
   const [age, setAge] = useState(0);
   const [name, setName] = useState('nguyen')
@@ -34,6 +44,15 @@ function App() {
   
   return (
   <div>
+    <div className='event'>
+      <input
+        type="text"
+        name="user"
+        placeholder="Please type somthing"
+        onChange={handleInputChange}
+      />
+      <button onClick={handleButtonClick}>Print</button>
+    </div>
     <div className='conatiner'>
       <button onClick={onIncreateAge}>tăng age lên 1</button>
       <Age age={age} displayName={name}/>
