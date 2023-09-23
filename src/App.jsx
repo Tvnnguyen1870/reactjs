@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Header from './components/Header'
 import HelloWorld from './components/Helloworld';
 import Main from './components/Main'
+import Navbar from './components/Nav';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   <div>
     <HelloWorld />
     <Header isLogined={isLogin} onLogin={onLoginClick} onLogout={onLogoutClick}/>
+    <Navbar />
     <Main />
     <Footer />
   </div>
